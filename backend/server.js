@@ -12,18 +12,15 @@ app.use(cors());
 //routes
 readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
 
-app.get("/", (req,res) => {
-  res.send("welcome facebook developer");
-});
-
 //database
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose
+  .connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
   })
   .then(() => console.log("database connected successfully"))
   .catch((err) => console.log("error connecting to mongodb", err));
- 
+
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}..`);
