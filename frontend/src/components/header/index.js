@@ -64,16 +64,16 @@ export default function Header() {
       <img src={user?.picture} alt="" />
       <span>{user?.first_name}</span>
     </Link>
+    <div className="circle_icon hover1" ref={allmenu}>
     <div
-          className={`circle_icon hover1 ${showAllMenu && 'active_header'}` }
-          ref={allmenu}
-          onClick={() => {
-            setShowAllMenu((prev) => !prev);
-          }}
-        >
-          <Menu />
-          {showAllMenu && <AllMenu />}
-        </div>
+      onClick={() => {
+        setShowAllMenu((prev) => !prev);
+      }}
+    >
+      <Menu />
+    </div>
+    {showAllMenu && <AllMenu />}
+    </div>
         <div className="circle_icon hover1">
           <Messenger />
     </div>
