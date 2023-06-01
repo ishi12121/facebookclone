@@ -11,7 +11,7 @@ export default function UserMenu({ user }) {
       {visible === 0 && (
         <div>
           <Link to="/profile" className="mmenu_header hover3">
-            <img src={user?.picture} alt="" />
+            <img src={user?.picture} alt="https://avatars.githubusercontent.com/u/106435172?s=400&u=f323a33976f23fcb94e37bf573af2bf81444f7f8&v=4" />
             <div className="mmenu_col">
               <span>
                 {user?.first_name} {user?.last_name}

@@ -61,7 +61,7 @@ export default function Header() {
     </div>
     <div className="header_right">
     <Link to="/profile" className="profile_link hover1">
-      <img src={user?.picture} alt="" />
+      <img src={user?.picture} alt="https://avatars.githubusercontent.com/u/106435172?s=400&u=f323a33976f23fcb94e37bf573af2bf81444f7f8&v=4" />
       <span>{user?.first_name}</span>
     </Link>
     <div className={`circle_icon hover1 ${showAllMenu && 'active_header'}`} ref={allmenu}>
