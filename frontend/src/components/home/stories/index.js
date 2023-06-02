@@ -3,7 +3,13 @@ import { ArrowRight, Plus } from "../../../svg";
 import "./style.css";
 import { stories } from "../../../data/home";
 import Story from "./Story";
+import {useMediaQuery} from "react-responsive";
+
 export default function Stories() {
+  const query1175px = useMediaQuery({
+    query: '(max-width: 1175px)',
+  });
+  const max = query1175px ? 4 : stories.length;
   return (
     <div className="stories">
       <div className="create_story_card">
@@ -17,7 +23,7 @@ export default function Stories() {
         </div>
         <div className="story_create_text">Create Story</div>
       </div>
-      {stories.map((story, i) => (
+      {stories.slice(0,max).map((story, i) => (
         <Story story={story} />
       ))}
       <div className="white_circle">
