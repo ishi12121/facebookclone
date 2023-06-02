@@ -7,7 +7,7 @@ import RightHome from "../../components/home/right";
 export default function Home() {
   const { user } = useSelector((user) => ({ ...user }));
   return (
-    <div>
+    <div className="home">
       <Header />
       <LeftHome user={user} />
       <RightHome user={user} />
