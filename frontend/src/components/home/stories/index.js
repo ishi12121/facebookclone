@@ -9,7 +9,13 @@ export default function Stories() {
   const query1175px = useMediaQuery({
     query: '(max-width: 1175px)',
   });
-  const max = query1175px ? 4 : stories.length;
+  const query960px = useMediaQuery({
+    query: '(max-width: 960px)',
+  });
+  
+  const max = query960px ? 
+  4 : query1175px ? 
+  4 : stories.length;
   return (
     <div className="stories">
       <div className="create_story_card">
