@@ -26,7 +26,7 @@ export default function SendVerification({ user }) {
         Your account is not verified,verify your account before it gets deleted
         after a month from creating.
       </span>
-      <a 
+      <a
         onClick={() => {
           sendVerificationLink();
         }}

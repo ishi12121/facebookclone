@@ -5,7 +5,6 @@ import HelpSupport from "./HelpSupport";
 import SettingsPrivacy from "./SettingsPrivacy";
 import { useDispatch } from "react-redux";
 import Cookies from "js-cookie";
-
 export default function UserMenu({ user }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -16,13 +15,13 @@ export default function UserMenu({ user }) {
       type: "LOGOUT",
     });
     navigate("/login");
-   };
+  };
   return (
     <div className="mmenu">
       {visible === 0 && (
         <div>
           <Link to="/profile" className="mmenu_header hover3">
-            <img src={user?.picture} alt="https://avatars.githubusercontent.com/u/106435172?s=400&u=f323a33976f23fcb94e37bf573af2bf81444f7f8&v=4" />
+            <img src={user?.picture} alt="" />
             <div className="mmenu_col">
               <span>
                 {user?.first_name} {user?.last_name}
@@ -83,9 +82,11 @@ export default function UserMenu({ user }) {
               <i className="right_icon"></i>
             </div>
           </div>
-          <div className="mmenu_item hover3" onClick={() =>{
-            logout();
-          }}
+          <div
+            className="mmenu_item hover3"
+            onClick={() => {
+              logout();
+            }}
           >
             <div className="small_circle">
               <i className="logout_filled_icon"></i>

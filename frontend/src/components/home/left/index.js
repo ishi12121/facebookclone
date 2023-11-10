@@ -9,7 +9,7 @@ export default function LeftHome({ user }) {
   const [visible, setVisible] = useState(false);
   return (
     <div className="left_home scrollbar">
-      <Link to="/profile" className="left_link hover1">
+      <Link to="/profile" className="left_link hover2">
         <img src={user?.picture} alt="" />
         <span>
           {user?.first_name} {user.last_name}
@@ -25,7 +25,7 @@ export default function LeftHome({ user }) {
       ))}
       {!visible && (
         <div
-          className="left_link hover1"
+          className="left_link hover2"
           onClick={() => {
             setVisible(true);
           }}
@@ -47,7 +47,7 @@ export default function LeftHome({ user }) {
             />
           ))}
           <div
-            className="left_link hover1 "
+            className="left_link hover2 "
             onClick={() => {
               setVisible(false);
             }}
@@ -66,13 +66,13 @@ export default function LeftHome({ user }) {
       </div>
       <div className="shortcut_list">
         <Shortcut
-          link=""                                  //LATER ❗❗
+          link="https://www.youtube.com/c/MohamedHaJJi1/featured"
           img="../../images/ytb.png"
           name="My Youtube channel"
         />
 
         <Shortcut
-          link=""                                   //later❗❗
+          link="https://www.instagram.com/med_hajji7/"
           img="../../images/insta.png"
           name="My Instagram "
         />
